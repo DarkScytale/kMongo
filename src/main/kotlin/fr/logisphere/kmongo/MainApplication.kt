@@ -11,6 +11,9 @@ class HelloApplication : Application() {
     // Resources definitions.
     private val interfaceBundle = ResourceBundle.getBundle("interface")
 
+    // Server connexion definition.
+    private var isConnected = false
+
     override fun start(stage: Stage) {
         val fxmlLoader = FXMLLoader(HelloApplication::class.java.getResource("main-view.fxml"))
         val scene = Scene(fxmlLoader.load(), 320.0, 240.0)

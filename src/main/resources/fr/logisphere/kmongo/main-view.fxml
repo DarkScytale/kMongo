@@ -5,38 +5,38 @@
 <?import javafx.scene.layout.*?>
 
 
-<Pane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.logisphere.kmongo.MainController">
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.logisphere.kmongo.MainController">
    <children>
-      <MenuBar>
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
-      <AnchorPane>
+      <Pane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
+            <MenuBar prefHeight="25.0" prefWidth="290.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#onDebug" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#onDebug" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#onDebug" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
             <VBox alignment="CENTER" prefHeight="322.0" prefWidth="592.0" spacing="20.0">
                 <padding>
                     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                 </padding>
-            
-                            <Label fx:id="welcomeText" />
+      
+                                  <Label fx:id="welcomeText" />
                 <Button onAction="#onHelloButtonClick" text="Hello!" />
             </VBox>
          </children>
-      </AnchorPane>
+      </Pane>
    </children>
-</Pane>
+</AnchorPane>
