@@ -4,12 +4,17 @@ import javafx.application.Application
 import javafx.fxml.FXMLLoader
 import javafx.scene.Scene
 import javafx.stage.Stage
+import java.util.*
 
 class HelloApplication : Application() {
+
+    // Resources definitions.
+    private val interfaceBundle = ResourceBundle.getBundle("interface")
+
     override fun start(stage: Stage) {
-        val fxmlLoader = FXMLLoader(HelloApplication::class.java.getResource("hello-view.fxml"))
+        val fxmlLoader = FXMLLoader(HelloApplication::class.java.getResource("main-view.fxml"))
         val scene = Scene(fxmlLoader.load(), 320.0, 240.0)
-        stage.title = "Hello!"
+        stage.title = interfaceBundle.getString("main_title")
         stage.scene = scene
         stage.show()
     }
