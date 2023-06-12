@@ -12,6 +12,7 @@ class MainController {
         welcomeText.text = "Welcome to JavaFX Application!"
     }
 
+    @FXML
     private fun onDebug() {
 
     }
